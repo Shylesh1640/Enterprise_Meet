@@ -1,0 +1,81 @@
+# 
+# Enterprise Meet Backend — Production Requirements
+# 
+
+# -- Web Framework --
+fastapi
+uvicorn[standard]
+python-multipart
+starlette
+
+# -- Pydantic & Settings --
+pydantic[email]
+pydantic-settings
+email-validator
+
+# -- Database (Async SQLAlchemy + PostgreSQL) --
+sqlalchemy[asyncio]
+asyncpg
+alembic
+pg8000
+
+# -- Redis (Async) --
+redis[asyncio]
+# hiredis
+
+# -- Celery (Task Queue) --
+celery[redis]
+flower
+kombu
+
+# -- Security & Auth --
+passlib[bcrypt]
+python-jose[cryptography]
+cryptography
+pyotp
+
+# -- Object Storage (MinIO/S3) --
+minio
+boto3
+
+# -- Email --
+aiosmtplib
+jinja2
+
+# -- HTTP Client --
+httpx
+
+# -- File Handling --
+aiofiles
+# Pillow
+# python-magic
+
+# -- Logging --
+structlog
+python-json-logger
+
+# -- Rate Limiting --
+slowapi
+limits
+
+# -- User Agent Parsing --
+user-agents
+
+# -- Monitoring --
+prometheus-client
+prometheus-fastapi-instrumentator
+
+# -- Utilities --
+python-dotenv
+# orjson
+anyio
+tenacity
+
+# -- Testing --
+pytest
+pytest-asyncio
+pytest-cov
+pytest-mock
+asgi-lifespan
+factory-boy
+faker
